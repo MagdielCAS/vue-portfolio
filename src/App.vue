@@ -3,7 +3,22 @@
     <router-view />
   </div>
 </template>
-
+<script>
+export default {
+  name: "App",
+  created() {
+    let vm = this;
+    window.onresize = () => {
+      if (vm.$isMobile()) {
+        vm.$router.push("/mobile");
+      } else {
+        vm.$router.push("/");
+      }
+    };
+    window.onresize();
+  }
+};
+</script>
 <style>
 @tailwind base;
 
