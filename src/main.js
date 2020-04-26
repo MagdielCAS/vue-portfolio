@@ -3,12 +3,12 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import plugins from './plugins';
-plugins;
 
 Vue.config.productionTip = false;
 
 new Vue({
   router,
   store,
+  i18n: plugins.i18n,
   render: h => h(App)
 }).$mount("#app");
