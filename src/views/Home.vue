@@ -20,6 +20,24 @@
                   <span>{{$t('bio.position')}}</span>
                   <span>{{$t('bio.hobbies')}}</span>
                 </p>
+                <div class="flex flex-row justify-around flex-wrap mt-2">
+                  <div
+                    class="cursor-pointer"
+                    @click="openUrl('https://github.com/MagdielCAS')"
+                    style="color: #333;"
+                  >
+                    <i class="fab fa-github mr-1"></i>
+                    {{$t('github')}}
+                  </div>
+                  <div
+                    class="cursor-pointer"
+                    @click="openUrl('https://linkedin.com/in/magdiel-campelo/')"
+                    style="color: #0077b5;"
+                  >
+                    <i class="fab fa-linkedin mr-1"></i>
+                    {{$t('linkedin')}}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -69,6 +87,11 @@ export default {
         border: Math.floor(Math.random() * 5 + 1),
         color: flatcolor(Math.abs(noise.perlin2(x / 100, y / 100)) * 360).hex
       });
+    }
+  },
+  methods: {
+    openUrl(url) {
+      window.open(url, "_blank");
     }
   }
 };
