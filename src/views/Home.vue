@@ -3,21 +3,23 @@
     <kinesis-container>
       <div class="w-screen h-screen flex justify-center items-center bg-blue-gray z-0">
         <kinesis-element :strength="10" type="depth" class="z-50">
-          <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+          <div class="rounded overflow-hidden shadow-lg bg-white">
             <div class="px-6 py-4 flex flex-row">
-              <div class="flex justify-center items-center">
+              <div class="flex justify-center items-center m-4">
                 <img
                   class="rounded-full"
-                  width="600"
-                  height="600"
-                  src="https://www.gravatar.com/avatar/c3c2f0d199db2d43eae71665ab1e129f?s=600"
+                  width="150"
+                  height="150"
+                  src="https://www.gravatar.com/avatar/c3c2f0d199db2d43eae71665ab1e129f?s=150"
                 />
               </div>
-              <div>
+              <div class="p-4">
                 <div class="font-bold text-xl mb-2">{{$t('name')}}</div>
-                <p
-                  class="text-gray-700 text-base"
-                >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+                <p class="text-gray-700 text-base flex flex-col">
+                  <strong>{{$t('bio.graduation')}}</strong>
+                  <span>{{$t('bio.position')}}</span>
+                  <span>{{$t('bio.hobbies')}}</span>
+                </p>
               </div>
             </div>
           </div>

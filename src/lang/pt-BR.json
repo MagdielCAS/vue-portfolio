@@ -1,3 +1,9 @@
 {
-  "name": "Magdiel Campelo"
+  "name": "Magdiel Campelo",
+  "bio": {
+    "graduation": "Engenheiro de computação - UFC",
+    "age": "25",
+    "position": "Desenvolvedor Fullstack",
+    "hobbies": "Entusiasta de IoT, Machine Learning e Blockchain"
+  }
 }
