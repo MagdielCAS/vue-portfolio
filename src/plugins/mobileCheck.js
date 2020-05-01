@@ -1,4 +1,5 @@
-import Vue from 'vue';
-import VueMobileDetection from 'vue-mobile-detection'
+import Vue from "vue";
+import VueMobileDetection from "vue-mobile-detection";
 
-Vue.use(VueMobileDetection)
+Vue.use(VueMobileDetection);
+export default "mobileCheck";

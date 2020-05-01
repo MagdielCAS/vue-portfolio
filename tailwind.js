@@ -2,10 +2,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'blue-gray': '#3f506e'
+        "blue-gray": "#3f506e",
+        "manatee": "#9aa0a8",
+        "cambridge-blue": "#a7c4b5",
+        "turquoise-greebn": "#a9d8b8",
+        "tea-green": "#beffc7",
+        "gold-fusion": "#72705b",
       }
-    },
+    }
   },
-  variants: {},
-  plugins: [],
-}
+  variants: {
+    // ['responsive', 'group-hover', 'group-focus', 'focus-within', 'first', 'last', 'odd', 'even', 'hover', 'focus', 'active', 'visited', 'disabled']
+    display: ["responsive", "group-hover"],
+    width: ["responsive", "group-hover", "hover"],
+    visibility: ["responsive", "group-hover", "hover"],
+    opacity: ["responsive", "group-hover", "hover", "focus"]
+  },
+  plugins: []
+};

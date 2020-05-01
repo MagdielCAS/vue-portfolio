@@ -1,6 +1,6 @@
 <template>
   <div class="home relative overflow-hidden">
-    <div class="w-screen h-screen flex justify-center items-center bg-blue-gray z-0">
+    <div class="w-screen h-screen flex justify-center items-center z-0">
       <ProfileCard class="z-50"></ProfileCard>
       <div
         v-for="(ball,index) in balls"
