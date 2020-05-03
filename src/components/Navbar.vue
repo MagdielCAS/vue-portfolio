@@ -1,11 +1,11 @@
 <template>
   <div
-    class="navbar fixed left-0 h-screen text-white z-50 group ease-in-out duration-500 w-16 hover:w-48"
+    class="unselectable navbar fixed left-0 h-screen text-white z-50 group ease-in-out duration-500 w-16 hover:w-48"
   >
     <div class="flex flex-col">
       <router-link to="/">
         <div class="flex p-4 items-center cursor-pointer nav-item text-tea-green">
-          <i class="fas fa-user-alt text-3xl"></i>
+          <i class="fas fa-user-alt text-2xl"></i>
           <div
             class="ml-2 text-xl invisible opacity-0 group-hover:visible group-hover:opacity-100 item-text"
             transition="fade"
@@ -14,7 +14,7 @@
       </router-link>
       <router-link to="/projects">
         <div class="flex p-4 items-center cursor-pointer nav-item text-tea-green">
-          <i class="fas fa-cubes text-3xl"></i>
+          <i class="fas fa-cubes text-2xl"></i>
           <div
             class="ml-2 text-xl invisible opacity-0 group-hover:visible group-hover:opacity-100 item-text"
             transition="fade"
