@@ -14,12 +14,26 @@
       </div>
       <span class="mb-1">{{ $t("maurer_rose.params") }}</span>
       <div class="flex flex-row items-center mb-2">
-        <span class="ml-1">n</span>
-        <vue-slider v-model="n" contained></vue-slider>
+        <span class="mr-2">n</span>
+        <vue-slider
+          class="flex-1"
+          v-model="n"
+          :max="nMax"
+          :min="nMin"
+          :interval="nStep"
+          contained
+        ></vue-slider>
       </div>
-      <div class="flex flex-row items-center mb-2">
-        <span class="ml-1">d</span>
-        <vue-slider v-model="d" :contained="true"></vue-slider>
+      <div v-if="!dnoise" class="flex flex-row items-center mb-2">
+        <span class="mr-2">d</span>
+        <vue-slider
+          class="flex-1"
+          v-model="d"
+          :max="dMax"
+          :min="dMin"
+          :interval="dStep"
+          :contained="true"
+        ></vue-slider>
       </div>
     </div>
   </div>
@@ -28,8 +42,9 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
-let VueP5 = require("vue-p5");
 import ToggleSwitch from "@/components/ToggleSwitch.vue";
+
+let VueP5 = require("vue-p5");
 
 @Component({
   components: {
