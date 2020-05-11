@@ -14,7 +14,9 @@
           'border-white mr-4': !content,
           'border-tea-green ml-4': content
         }"
-      >&nbsp;</div>
+      >
+        &nbsp;
+      </div>
     </div>
   </div>
 </template>

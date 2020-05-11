@@ -1,4 +1,4 @@
- <template>
+<template>
   <div class="rounded overflow-hidden shadow-lg bg-white">
     <SmoothReflow>
       <div class="px-6 py-4 flex flex-col sm:flex-row">
@@ -10,16 +10,18 @@
             src="https://www.gravatar.com/avatar/c3c2f0d199db2d43eae71665ab1e129f?s=150"
           />
           <div class="sm:hidden flex flex-col justify-center items-center">
-            <div class="font-bold text-xl mb-2">{{$t('name')}}</div>
-            <span>{{$t('bio.position')}}</span>
+            <div class="font-bold text-xl mb-2">{{ $t("name") }}</div>
+            <span>{{ $t("bio.position") }}</span>
           </div>
         </div>
         <div class="p-4">
-          <div class="font-bold text-xl mb-2 hidden sm:block">{{$t('name')}}</div>
+          <div class="font-bold text-xl mb-2 hidden sm:block">
+            {{ $t("name") }}
+          </div>
           <p class="text-gray-700 text-base flex flex-col">
-            <strong>{{$t('bio.graduation')}}</strong>
-            <span class="hidden sm:block">{{$t('bio.position')}}</span>
-            <span>{{$t('bio.hobbies')}}</span>
+            <strong>{{ $t("bio.graduation") }}</strong>
+            <span class="hidden sm:block">{{ $t("bio.position") }}</span>
+            <span>{{ $t("bio.hobbies") }}</span>
           </p>
           <div class="flex flex-row justify-around flex-wrap mt-2">
             <div
@@ -28,7 +30,7 @@
               style="color: #333;"
             >
               <i class="fab fa-github mr-1"></i>
-              {{$t('github')}}
+              {{ $t("github") }}
             </div>
             <div
               class="cursor-pointer"
@@ -36,7 +38,7 @@
               style="color: #0077b5;"
             >
               <i class="fab fa-linkedin mr-1"></i>
-              {{$t('linkedin')}}
+              {{ $t("linkedin") }}
             </div>
           </div>
         </div>
@@ -44,7 +46,7 @@
     </SmoothReflow>
   </div>
 </template>
- 
+
 <script>
 export default {
   name: "ProfileCard",
@@ -55,6 +57,5 @@ export default {
   }
 };
 </script>
- 
- <style>
-</style>
+
+<style></style>

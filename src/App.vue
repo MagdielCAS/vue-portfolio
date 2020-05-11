@@ -8,40 +8,48 @@
   </div>
 </template>
 
-<script>
-import Navbar from "./components/Navbar";
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
 
-export default {
-  name: "App",
+import Navbar from "@/components/Navbar.vue";
+
+@Component({
   components: {
     Navbar
-  },
-  created() {
-    let vm = this;
-    window.onresize = () => {
-      if (
-        vm.$router.history.current.name === "Mobile" ||
-        vm.$router.history.current.name === "Home"
-      ) {
-        if (vm.$isMobile() && vm.$router.history.current.name === "Home") {
-          vm.$router.push("/mobile");
-        } else if (vm.$router.history.current.name === "Mobile") {
-          vm.$router.push("/");
-        }
-      }
-    };
-    window.onresize();
   }
-};
+})
+export default class App extends Vue {
+  name = "App";
+
+  created() {
+    window.onresize = this.verifyMobileOnResize;
+    this.verifyMobileOnResize();
+  }
+
+  verifyMobileOnResize() {
+    let vm = this;
+    if (
+      // @ts-ignore
+      vm.$router.history.current.name === "Mobile" ||
+      // @ts-ignore
+      vm.$router.history.current.name === "Home"
+    ) {
+      // @ts-ignore
+      if (vm.$isMobile() && vm.$router.history.current.name === "Home") {
+        vm.$router.push("/mobile");
+        // @ts-ignore
+      } else if (vm.$router.history.current.name === "Mobile") {
+        vm.$router.push("/");
+      }
+    }
+  }
+}
 </script>
 
 <style>
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -49,7 +57,6 @@ export default {
   text-align: center;
   color: #444;
 }
-
 .unselectable {
   -moz-user-select: none;
   -khtml-user-select: none;

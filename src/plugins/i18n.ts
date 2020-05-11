@@ -17,5 +17,5 @@ export const i18n = new VueI18n({
 
 export const languages = [
   { value: "br", flag: "br" },
-  { value: "en", flag: "us" },
+  { value: "en", flag: "us" }
 ];

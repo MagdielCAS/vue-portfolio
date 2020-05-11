@@ -6,15 +6,22 @@
           <ProfileCard></ProfileCard>
         </kinesis-element>
         <kinesis-element
-          v-for="(ball,index) in balls"
+          v-for="(ball, index) in balls"
           :key="index"
           class="absolute z-10"
-          :style="{top:ball.y+'px',left:ball.x+'px',}"
+          :style="{ top: ball.y + 'px', left: ball.x + 'px' }"
         >
           <div
             class="rounded-full border"
-            :style="{width: 2*ball.r+'px',height: 2*ball.r+'px', 'border-color': ball.color, 'border-width':ball.border+'px'}"
-          >&nbsp;</div>
+            :style="{
+              width: 2 * ball.r + 'px',
+              height: 2 * ball.r + 'px',
+              'border-color': ball.color,
+              'border-width': ball.border + 'px'
+            }"
+          >
+            &nbsp;
+          </div>
         </kinesis-element>
       </div>
     </kinesis-container>

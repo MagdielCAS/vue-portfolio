@@ -1,5 +1,5 @@
 import Vue from "vue";
-import VueMobileDetection from "vue-mobile-detection";
+let VueMobileDetection = require("vue-mobile-detection");
 
 Vue.use(VueMobileDetection);
 export default "mobileCheck";

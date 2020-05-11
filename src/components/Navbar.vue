@@ -4,31 +4,41 @@
   >
     <div class="flex flex-col">
       <router-link to="/">
-        <div class="flex p-4 items-center cursor-pointer nav-item text-tea-green">
+        <div
+          class="flex p-4 items-center cursor-pointer nav-item text-tea-green"
+        >
           <i class="fas fa-user-alt text-2xl"></i>
           <div
             class="ml-2 text-xl invisible opacity-0 group-hover:visible group-hover:opacity-100 item-text"
             transition="fade"
-          >{{ $t("home") }}</div>
+          >
+            {{ $t("home") }}
+          </div>
         </div>
       </router-link>
       <router-link to="/projects">
-        <div class="flex p-4 items-center cursor-pointer nav-item text-tea-green">
+        <div
+          class="flex p-4 items-center cursor-pointer nav-item text-tea-green"
+        >
           <i class="fas fa-cubes text-2xl"></i>
           <div
             class="ml-2 text-xl invisible opacity-0 group-hover:visible group-hover:opacity-100 item-text"
             transition="fade"
-          >{{ $t("projects") }}</div>
+          >
+            {{ $t("projects") }}
+          </div>
         </div>
       </router-link>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "Navbar"
-};
+<script lang="ts">
+import { Vue } from "vue-property-decorator";
+
+export default class Navbar extends Vue {
+  name = "Navbar";
+}
 </script>
 
 <style>

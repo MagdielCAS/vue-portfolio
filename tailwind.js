@@ -3,8 +3,8 @@ module.exports = {
     extend: {
       colors: {
         "blue-gray": "#70819e",
-        "manatee": "#9aa0a8",
-        "munsell": "#00A878",
+        manatee: "#9aa0a8",
+        munsell: "#00A878",
         "cambridge-blue": "#a7c4b5",
         "turquoise-greebn": "#a9d8b8",
         "tea-green": "#beffc7",
