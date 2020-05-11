@@ -9,5 +9,10 @@
   "github": "/MagdielCAS",
   "linkedin": "/magdiel-campelo",
   "projects": "Projects",
-  "home": "Home"
+  "home": "Home",
+  "maurer_rose": {
+    "animate": "Animate",
+    "theme": "Light Mode",
+    "params": "Rose params"
+  }
 }

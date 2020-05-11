@@ -3,15 +3,37 @@
     <div class="rounded">
       <vue-p5 @setup="setup" @draw="draw"></vue-p5>
     </div>
+    <div class="flex flex-col px-4">
+      <div class="flex flex-row items-center mb-2">
+        <ToggleSwitch v-model="dnoise"></ToggleSwitch>
+        <span class="ml-1">{{ $t("maurer_rose.animate") }}</span>
+      </div>
+      <div class="flex flex-row items-center mb-2">
+        <ToggleSwitch v-model="lightTheme"></ToggleSwitch>
+        <span class="ml-1">{{ $t("maurer_rose.theme") }}</span>
+      </div>
+      <span class="mb-1">{{ $t("maurer_rose.params") }}</span>
+      <div class="flex flex-row items-center mb-2">
+        <span class="ml-1">n</span>
+        <vue-slider v-model="n" contained></vue-slider>
+      </div>
+      <div class="flex flex-row items-center mb-2">
+        <span class="ml-1">d</span>
+        <vue-slider v-model="d" :contained="true"></vue-slider>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import VueP5 from "vue-p5";
+import ToggleSwitch from "../../components/ToggleSwitch";
+
 export default {
   name: "MaurerRose",
   components: {
-    "vue-p5": VueP5
+    "vue-p5": VueP5,
+    ToggleSwitch
   },
   data: () => ({
     vh: 400,
