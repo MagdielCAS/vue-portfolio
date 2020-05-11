@@ -12,6 +12,7 @@
 import { Component, Vue } from "vue-property-decorator";
 
 import Navbar from "@/components/Navbar.vue";
+import _isMobile from "@/utils/mobileCheck";
 
 @Component({
   components: {
@@ -22,26 +23,28 @@ export default class App extends Vue {
   name = "App";
 
   created() {
-    window.onresize = this.verifyMobileOnResize;
-    this.verifyMobileOnResize();
+    window.onresize = this.verifyMobileOnResize(this);
+    this.verifyMobileOnResize(this)();
   }
 
-  verifyMobileOnResize() {
-    let vm = this;
-    if (
-      // @ts-ignore
-      vm.$router.history.current.name === "Mobile" ||
-      // @ts-ignore
-      vm.$router.history.current.name === "Home"
-    ) {
-      // @ts-ignore
-      if (vm.$isMobile() && vm.$router.history.current.name === "Home") {
-        vm.$router.push("/mobile");
+  verifyMobileOnResize(vm: any) {
+    return () => {
+      console.log(vm);
+      if (
         // @ts-ignore
-      } else if (vm.$router.history.current.name === "Mobile") {
-        vm.$router.push("/");
+        vm.$router.history.current.name === "Mobile" ||
+        // @ts-ignore
+        vm.$router.history.current.name === "Home"
+      ) {
+        // @ts-ignore
+        if (_isMobile() && vm.$router.history.current.name === "Home") {
+          vm.$router.push("/mobile");
+          // @ts-ignore
+        } else if (vm.$router.history.current.name === "Mobile") {
+          vm.$router.push("/");
+        }
       }
-    }
+    };
   }
 }
 </script>

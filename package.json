@@ -15,7 +15,6 @@
     "vue-class-component": "^7.2.3",
     "vue-i18n": "^8.17.3",
     "vue-kinesis": "^1.1.5",
-    "vue-mobile-detection": "^1.0.0",
     "vue-p5": "^0.8.3",
     "vue-property-decorator": "^8.4.1",
     "vue-router": "^3.1.6",

@@ -26,6 +26,7 @@
 
 <script>
 import ProfileCard from "@/components/ProfileCard.vue";
+import _isMobile from "@/utils/mobileCheck";
 import flatcolor from "@/utils/flatcolor";
 import perlin from "@/utils/perlin";
 
@@ -39,7 +40,7 @@ export default {
   }),
   computed: {
     isMobile() {
-      return !!this.$isMobile();
+      return !!_isMobile();
     }
   },
   created() {
