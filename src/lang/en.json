@@ -14,5 +14,8 @@
     "animate": "Animate",
     "theme": "Light Mode",
     "params": "Rose params"
+  },
+  "warnings": {
+    "development": "This page is under development!"
   }
 }

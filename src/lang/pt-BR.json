@@ -14,5 +14,8 @@
     "animate": "Animação",
     "theme": "Tema claro",
     "params": "Parametros"
+  },
+  "warnings": {
+    "development": "Essa página está em desenvolvimento!"
   }
 }
